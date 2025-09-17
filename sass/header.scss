@@ -1,0 +1,106 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+    @include control;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../img/home-img/img-home-1.png) no-repeat center center/cover;
+    height: 65vh;
+    @include converted;
+    padding: 100px 100px;
+
+    .header-content {
+        .h1-header {
+            padding-top: 70px;
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .h3-header {
+            font-size: 40px;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+
+        .par-header {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-header {
+            display: inline-block;
+
+            .hire-me {
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                }
+
+                background: #3379b741;
+                padding: 10px 30px;
+                font-size: 18px;
+                color: $text-color;
+                border: 2px solid #337AB7;
+                text-decoration: none;
+                border-radius: 30px;
+                font-weight: bold;
+                transition: background-color 0.3s,
+                color 0.3s;
+            }
+
+            .hire-me:hover {
+                background-color: #337AB7;
+                color: black;
+            }
+
+
+            .my-work {
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                }
+
+                margin-left: 10px;
+                background: #33b7b34d;
+                padding: 10px 30px;
+                font-size: 18px;
+                color: $text-color;
+                border: 2px solid #33B7B3;
+                text-decoration: none;
+                border-radius: 30px;
+                font-weight: bold;
+                transition: background-color 0.3s,
+                color 0.3s;
+            }
+
+            .my-work:hover {
+                background-color: #33B7B3;
+                color: black;
+            }
+        }
+    }
+
+    .my-img {
+        margin-top: 70px;
+        object-fit: cover;
+        box-shadow: rgb(6, 255, 255) 0px 2px 4px 0px, rgba(9, 181, 255, 0.32) 0px 2px 16px 0px;
+        border: 4px solid #33B7B3;
+        border-radius: 50%;
+        width: 320px;
+        height: 320px;
+    }
+}

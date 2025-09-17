@@ -1,0 +1,60 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+    @include control;
+}
+
+.block-section {
+    .h1-block {
+        @include title-style;
+    }
+
+    .par-block-intro {
+        @include paragraph-style;
+    }
+
+    .blocks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin: 0 100px 60px 100px;
+
+        .block {
+            font-size: 16px;
+            color: #666;
+
+            .block-img {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            .block-title {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .par-block {
+                font-size: 16px;
+                color: #666;
+            }
+
+            .read-more {
+                font-size: 16px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

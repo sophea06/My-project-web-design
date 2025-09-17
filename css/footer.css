@@ -1,1 +1,94 @@
-/*# sourceMappingURL=footer.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #337ab7;
+  color: #ffffff;
+}
+footer ul li {
+  list-style: none;
+}
+footer ul li a {
+  line-height: 2em;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #f59e0b;
+}
+footer .footer-top {
+  line-height: 1.5em;
+  margin: 50px 90px 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer .footer-top .footer-about-me {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .footer-top .footer-about-me .bxl-facebook,
+footer .footer-top .footer-about-me .bxl-github,
+footer .footer-top .footer-about-me .bxl-linkedin {
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.162);
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+footer .footer-top .bxl-facebook:hover {
+  transform: translateY(-10px);
+}
+footer .footer-top .bxl-github:hover {
+  transform: translateY(-10px);
+}
+footer .footer-top .bxl-linkedin:hover {
+  transform: translateY(-10px);
+}
+footer .footer-link {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-link .h2-link {
+  margin-bottom: 30px;
+}
+footer ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+footer .footer-buttom {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+footer .footer-service {
+  line-height: 2em;
+}
+footer .footer-service .h2-footer-service {
+  margin-bottom: 20px;
+}
+footer .footer-conact {
+  line-height: 1.5em;
+}
+footer .footer-conact .icon-footer {
+  margin-bottom: 20px;
+  display: flex;
+}
+footer .footer-conact i {
+  margin-right: 20px;
+}
+footer .footer-conact i:hover {
+  color: #f59e0b;
+  cursor: pointer;
+}
+footer .footer-conact .h2-footer-contact {
+  margin-bottom: 30px;
+}/*# sourceMappingURL=footer.css.map */

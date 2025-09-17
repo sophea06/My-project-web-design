@@ -1,1 +1,78 @@
+@mixin control {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
+@mixin converted {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin hovered-link {
+    &:hover {
+        padding-bottom: 2px;
+        border-bottom: 2px solid $text-color-hover;
+    }
+}
+
+@mixin hover-icon {
+    &:hover {
+        color: $text-color-hover;
+        cursor: pointer;
+    }
+}
+
+@mixin position-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+}
+
+@mixin service-box-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    }
+}
+
+@mixin skill-bar-style {
+    border-radius: 10px;
+}
+
+@mixin service-icon-style {
+    font-size: 50px;
+    color: #337ab7;
+    margin-bottom: 20px;
+}
+
+@mixin service-title-style {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+@mixin service-description-style {
+    font-size: 16px;
+    color: #666;
+}
+
+@mixin title-style {
+    text-align: center;
+    font-size: 40px;
+}
+
+@mixin paragraph-style {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}

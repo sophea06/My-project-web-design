@@ -1,1 +1,7 @@
-/*# sourceMappingURL=block.css.map */
+*{margin:0;padding:0;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}.block-section .h1-block{text-align:center;font-size:40px}.block-section .par-block-intro{text-align:center;font-size:20px;margin-top:10px;margin-bottom:60px}.block-section .blocks{display:grid;grid-template-columns:repeat(3, 1fr);gap:50px;margin:0 100px 60px 100px}.block-section .blocks .block{font-size:16px;color:#666}.block-section .blocks .block .block-img{width:100%;height:200px;border-radius:10px;box-shadow:rgba(0,0,0,.1) 0px 4px 12px;transition:transform .3s ease}.block-section .blocks .block .block-img:hover{transform:scale(1.05)}.block-section .blocks .block .block-title{padding-top:10px;padding-bottom:10px}.block-section .blocks .block .par-block{font-size:16px;color:#666}.block-section .blocks .block .read-more{font-size:16px;text-decoration:none;font-weight:bold}.block-section .blocks .block .read-more:hover{text-decoration:underline}/*# sourceMappingURL=block.css.map */16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.block-section .blocks .block .read-more:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=block.css.map */

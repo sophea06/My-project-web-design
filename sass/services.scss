@@ -1,0 +1,48 @@
+@import './variables';
+@import './mixins';
+
+* {
+    @include control;
+}
+
+.service-section {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    .h1-service {
+        @include title-style;
+    }
+
+    .par-service-intro {
+        @include paragraph-style;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin: 0 100px 60px 100px;
+
+        .service-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            @include service-box-hover;
+
+            .service-icon {
+                @include service-icon-style;
+            }
+
+            .service-title {
+                @include service-title-style;
+            }
+
+            .service-description {
+                font-size: 16px;
+                color: #666;
+            }
+        }
+    }
+}

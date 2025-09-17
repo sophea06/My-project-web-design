@@ -1,0 +1,44 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+    @include control;
+}
+
+nav {
+    @include position-nav;
+    @include converted;
+    padding: 20px 50px;
+    background-color: #337ab7;
+    color: $text-color;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+    }
+
+    ul {
+        margin-right: 100px;
+        display: flex;
+        gap: 30px;
+
+        li {
+            list-style: none;
+
+            a {
+                font-weight: bold;
+                text-decoration: none;
+                color: $text-color;
+                @include hovered-link;
+            }
+        }
+    }
+}

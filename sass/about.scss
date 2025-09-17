@@ -1,0 +1,142 @@
+@import "variables";
+@import "mixins";
+
+* {
+    @include control;
+}
+
+.about {
+    .h2-about {
+        padding-top: 50px;
+        @include title-style;
+    }
+
+    .par-about {
+        @include paragraph-style;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 0 100px 60px 100px;
+
+        .about-img {
+            width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .about-text {
+            .h3-about {
+                font-size: 24px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 10px;
+
+                span {
+                    color: blue;
+                }
+            }
+
+            .par-about-intro {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.6;
+            }
+
+            .info {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                .info-left{
+                    line-height: 2em;
+                    .par-info{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                    .bx-chevron-right{
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: blue;
+                        margin-right: 5px;
+                    }
+                }
+                .info-right{
+                    line-height: 2em;
+                    .par-info{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                    .bx-chevron-right{
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: blue;
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .btn-about {
+                .btn-hire-me-about{
+                    margin-right: 5px;
+                    margin-top: 10px;
+                    display: inline-block;
+                    background: #3379b741;
+                    padding: 8px 25px;
+                    font-size: 18px;
+                    border: 2px solid #337AB7;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    transition: background-color 0.3s,
+                    color 0.3s;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                    &:hover {
+                        background-color: #337AB7;
+                        color: white;
+                    }
+                }
+                .btn-download-cv-about{
+                    margin-top: 10px;
+                    display: inline-block;
+                    background: #3379b741;
+                    padding: 8px 25px;
+                    font-size: 18px;
+                    border: 2px solid #337AB7;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    transition: background-color 0.3s,
+                    color 0.3s;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                    &:hover {
+                        background-color: #337AB7;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+    }
+}

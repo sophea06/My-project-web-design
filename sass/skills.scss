@@ -1,0 +1,56 @@
+@import "../sass/variables";
+@import "../sass/mixins";
+
+* {
+    @include control;
+}
+
+.skills-section {
+    .skills-title {
+        @include title-style;
+    }
+
+    .skills-description {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .skills-description-creative {
+        @include paragraph-style;
+    }
+
+    .progress-bar {
+        height: 10px;
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+        text-align: center;
+        background-color: #337ab7;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    .progress-bar-warning {
+        background-color: #f0ad4e;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin: 0 100px 60px 100px;
+
+        .top-data {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .data {
+            margin-bottom: 30px;
+        }
+
+        .skill-bar {
+            overflow: hidden;
+        }
+    }
+}
