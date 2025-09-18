@@ -1,3 +1,89 @@
+// @import "./variables";
+// @import "./mixins";
+
+// * {
+//     @include control;
+// }
+
+// nav {
+//     .menu-icon {
+//         display: none;
+//     }
+
+//     @include position-nav;
+//     @include converted;
+//     padding: 20px 50px;
+//     background-color: #337ab7;
+//     color: $text-color;
+
+//     .logo {
+//         display: flex;
+//         align-items: center;
+//         gap: 10px;
+
+//         .logo-img {
+//             width: 50px;
+//             height: 50px;
+//             border-radius: 50%;
+//             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+//         }
+//     }
+
+//     ul {
+//         margin-right: 100px;
+//         display: flex;
+//         gap: 30px;
+
+//         li {
+//             list-style: none;
+
+//             a {
+//                 font-weight: bold;
+//                 text-decoration: none;
+//                 color: $text-color;
+//                 @include hovered-link;
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width:300px) and (max-width:600px){
+//     nav{
+//         margin: 0;
+//         padding: 10px 0px 10px 10px;
+//         width: 100%;
+//         ul{
+//             margin: 0;
+//             padding: 0;
+//             gap: 1px;
+//             a{
+//                 font-size: 14px;
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width:768px) and (max-width:840px) {
+//     nav {
+//         .menu-icon{
+//             display: none;
+//         }
+//         margin: 0;
+//         padding: 10px 0;
+
+//         .logo {
+//             margin-left: 10px;
+//         }
+
+//         ul {
+//             margin: 0 20px 0 0;
+//             padding: 0;
+//             gap: 20px;
+//         }
+
+//     }
+// }
+
 @import "./variables";
 @import "./mixins";
 
@@ -6,6 +92,10 @@
 }
 
 nav {
+    .menu-icon {
+        display: none; // hidden by default
+    }
+
     @include position-nav;
     @include converted;
     padding: 20px 50px;
@@ -27,7 +117,7 @@ nav {
 
     ul {
         margin-right: 100px;
-        display: flex;
+        display: flex; // horizontal menu by default
         gap: 30px;
 
         li {
@@ -43,18 +133,63 @@ nav {
     }
 }
 
+/* 📱 Mobile phones only */
+@media  (max-width: 600px) {
+    nav {
+        margin: 0;
+        padding: 10px 15px;
+        width: 100%;
+
+        .menu-icon {
+            margin-left: -200px;
+            display: block; // show hamburger only on mobile
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        ul {
+            display: none; // hide horizontal menu by default
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 15px;
+            background-color: #337ab7;
+            width: 180px;
+            padding: 10px;
+            border-radius: 8px;
+            gap: 10px;
+
+            li a {
+                font-size: 14px;
+                display: block;
+            }
+        }
+
+        /* Show menu when checkbox is checked */
+        input[type="checkbox"]:checked+.menu-icon+ul {
+            display: flex;
+        }
+    }
+}
+
+/* Tablet */
 @media (min-width:768px) and (max-width:840px) {
-    nav{
+    nav {
+        .menu-icon {
+            display: none;
+        }
+
         margin: 0;
         padding: 10px 0;
-        .logo{
+
+        .logo {
             margin-left: 10px;
         }
-        ul{
+
+        ul {
             margin: 0 20px 0 0;
             padding: 0;
             gap: 20px;
         }
-
     }
 }

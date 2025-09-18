@@ -16,6 +16,7 @@
     }
 
     .about-content {
+        // width: 100%;
         display: flex;
         align-items: center;
         gap: 30px;
@@ -34,6 +35,8 @@
         }
 
         .about-text {
+            width: 100%;
+
             .h3-about {
                 font-size: 24px;
                 font-weight: 600;
@@ -59,28 +62,34 @@
                 align-items: center;
                 margin-top: 20px;
                 margin-bottom: 20px;
-                .info-left{
+
+                .info-left {
                     line-height: 2em;
-                    .par-info{
+
+                    .par-info {
                         display: flex;
                         align-items: center;
                         gap: 5px;
                     }
-                    .bx-chevron-right{
+
+                    .bx-chevron-right {
                         font-weight: bold;
                         font-size: 20px;
                         color: blue;
                         margin-right: 5px;
                     }
                 }
-                .info-right{
+
+                .info-right {
                     line-height: 2em;
-                    .par-info{
+
+                    .par-info {
                         display: flex;
                         align-items: center;
                         gap: 5px;
                     }
-                    .bx-chevron-right{
+
+                    .bx-chevron-right {
                         font-weight: bold;
                         font-size: 20px;
                         color: blue;
@@ -90,7 +99,7 @@
             }
 
             .btn-about {
-                .btn-hire-me-about{
+                .btn-hire-me-about {
                     margin-right: 5px;
                     margin-top: 10px;
                     display: inline-block;
@@ -102,18 +111,20 @@
                     border-radius: 10px;
                     font-weight: bold;
                     transition: background-color 0.3s,
-                    color 0.3s;
+                        color 0.3s;
 
                     a {
                         color: black;
                         text-decoration: none;
                     }
+
                     &:hover {
                         background-color: #337AB7;
                         color: white;
                     }
                 }
-                .btn-download-cv-about{
+
+                .btn-download-cv-about {
                     margin-top: 10px;
                     display: inline-block;
                     background: #3379b741;
@@ -124,12 +135,13 @@
                     border-radius: 10px;
                     font-weight: bold;
                     transition: background-color 0.3s,
-                    color 0.3s;
+                        color 0.3s;
 
                     a {
                         color: black;
                         text-decoration: none;
                     }
+
                     &:hover {
                         background-color: #337AB7;
                         color: white;
@@ -141,14 +153,61 @@
     }
 }
 
+@media (min-width:300px) and (max-width:600px) {
+    .about {
+        // margin: 0;
+        // padding: 0;
+        // width: 100%;
+
+        .par-about {
+            margin: 0 8px 40px 8px;
+        }
+
+        .about-content {
+            margin-left: -1px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            #about-text-1 {
+                margin: 0;
+                width: 100%;
+                .heading-2-about{
+                    margin-left: 20px;
+                }
+                #h3-about-1 {
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+                .par-about-intro{
+                    margin-right: 12px;
+                    margin-left: 20px;      
+                }
+                .info{
+                    margin-left: 20px;
+                }
+                .btn-about{
+                    margin-left: 20px;
+                }
+                // .info-left{
+                //     margin-left: 20px;
+                // }
+            }
+        }
+    }
+}
+
 @media (min-width:768px) and (max-width:840px) {
-    .about{
+    .about {
         margin: 0;
         padding: 0;
-        .par-about{
+
+        .par-about {
             margin: 0 40px 50px 40px;
         }
-        .about-content{
+
+        .about-content {
             margin: 0 40px 50px 40px;
             padding: 0;
             display: flex;

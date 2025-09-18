@@ -7,6 +7,7 @@
 
 .resume-section {
     .heading-1 {
+        padding-top: 40px;
         text-align: center;
         font-size: 40px;
     }
@@ -17,15 +18,73 @@
         margin-bottom: 60px;
     }
 
-    .resume-section {
+    .resume-section-buttom {
         .resume {
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 50px;
-            margin: 0 100px 60px 100px;
 
-            .education,
+            .education {
+                width: 80%;
+                margin-left: 100px;
+
+                .timeline {
+                    border-left: 2px solid #ddd;
+                    margin-left: 20px;
+
+                    .timeline-item {
+                        position: relative;
+                        padding: 10px 20px;
+                        border-bottom: 1px solid #ddd;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: -9px;
+                            top: 15px;
+                            width: 16px;
+                            height: 16px;
+                            background-color: #337ab7;
+                            border-radius: 50%;
+                            border: 2px solid #fff;
+                            box-shadow: 0 0 0 2px #337ab7;
+                        }
+
+                        .timeline-date {
+                            font-weight: bold;
+                            color: #337ab7;
+                        }
+
+                        .timeline-title {
+                            font-size: 18px;
+                            margin-top: 5px;
+                        }
+
+                        .timeline-subtitle {
+                            font-size: 16px;
+                            color: #555;
+                            margin-top: 3px;
+                        }
+
+                        .timeline-description {
+                            font-size: 14px;
+                            color: #777;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+
+            }
+
             .experience {
+                width: 80%;
+                margin-left: 50px;
+
                 .timeline {
                     border-left: 2px solid #ddd;
                     margin-left: 20px;
@@ -80,18 +139,51 @@
     }
 }
 
-@media (min-width:768px) and (max-width:840px) {
-    .resume-section{
-        margin: 0 40px;
-        .resume {
-            width: 100%;
-            .education{
+@media (min-width:300px) and (max-width:600px) {
+    .resume-section {
+        .resume-intro {
+            margin: 0 13px 20px 13px;
+        }
+
+        .resume-section-buttom {
+            .resume {
                 width: 100%;
-                margin-left: -150px;
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .education {
+                    margin-left: 20px;
+                    width: 90%;
+                }
+
+                .experience {
+                    margin-left: 20px;
+                    width: 90%;
+                }
             }
-            .experience{
-                margin-right: 30px;
-                margin-left: -170px;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:840px) {
+    .resume-section {
+        .resume-section-buttom {
+            .resume {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .education {
+                    width: 95%;
+                    margin-left: 30px;
+                }
+
+                .experience {
+                    width: 99%;
+                    margin-left: -20px;
+                }
             }
         }
     }

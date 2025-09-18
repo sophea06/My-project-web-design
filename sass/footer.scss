@@ -113,6 +113,27 @@ footer {
     }
 }
 
+@media (min-width:300px) and (max-width:600px){
+    footer{
+        width: 100%;
+        .footer-top{
+            margin: 30px 20px 0 30px;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            .footer-about-me{
+                .h2-footer{
+                    padding-bottom: 20px;
+                }
+                .par-footer-about{
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width:768px) and (max-width:840px) {
     footer{
         .footer-top{

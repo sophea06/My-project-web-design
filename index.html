@@ -21,6 +21,39 @@
 </head>
 
 <body>
+    <!-- <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#blog">My Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul> -->
+
+
+    <!-- <nav>
+        <div class="logo">
+            <img class="logo-img" src="./img/home-img/my-img.png" alt="logo image">
+            <h2>Sophea</h2>
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <ul>
+            <li><a id="active" href="#">Home</a></li>
+            <li><a id="active" href="#about">About</a></li>
+            <li><a id="active" href="#skills">Skills</a></li>
+            <li><a id="active" href="#resume">Resume</a></li>
+            <li><a id="active" href="#service">Service</a></li>
+            <li><a id="active" href="#project">Project</a></li>
+            <li><a id="active" href="#block">My block</a></li>
+            <li><a id="active" href="#contact">Contact</a></li>
+        </ul>
+    </nav> -->
 
     <nav>
         <div class="logo">
@@ -39,7 +72,7 @@
         </ul>
     </nav>
 
-    <header>
+    <header class="header">
         <section id="home" class="header-content">
             <h1 class="h1-header">I'm Sophea</h1>
             <h3 class="h3-header">And I'm a <span>Web Developer</span></h3>
@@ -53,8 +86,9 @@
                 </button>
             </div>
         </section>
-        <section class="header-image">
-            <img class="my-img" src="./img/home-img/my-photo-3.png" alt="header image">
+        <section id="image-header" class="header-image">
+            <img id="my-img-1" class="my-img " src="./img/home-img/my-photo-3.png" alt="header image">
+            <img class="my-img-2" src="./img/home-img/img-profile-1.png" alt="">
         </section>
     </header>
 
@@ -67,9 +101,9 @@
                 <div class="about-image">
                     <img class="about-img" src="./img/about-img/about-1.png" alt="about image">
                 </div>
-                <div class="about-text">
+                <div id="about-text-1" class="about-text">
                     <h2 class="heading-2-about">UI/UX Designer & Web Developer.</h2>
-                    <h3 class="h3-about">I'm Sophea and I'm a <span>Web Developer</span></h3>
+                    <h3 id="h3-about-1" class="h3-about">I'm Sophea and I'm a <span>Web Developer</span></h3>
                     <p class="par-about-intro">Far far away, behind the word mountains, far from the countries Vokalia
                         and
                         Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
@@ -198,7 +232,7 @@
         <section id="resume-section" class="resume-section">
             <h1 id="resume" class="heading-1">Resume</h1>
             <p class="resume-intro">Here you can find my professional experience and education background.</p>
-            <section class="resume-section">
+            <section class="resume-section-buttom">
                 <section class="resume">
                     <section class="education">
                         <h2 class="heading-2-resume">Education</h2>
@@ -465,7 +499,7 @@
     <footer>
         <section class="footer-top">
             <section class="footer-about-me">
-                <h2>About me</h2>
+                <h2 class="h2-footer">About me</h2>
 
                 <p class="par-footer-about">Far far away, behind the word mountains, far from the countries Vokalia and
                     Consonantia, there live the blind texts.</p>
@@ -547,6 +581,12 @@
         </section>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("show");
+        }
+
+    </script>
 </body>
 
 </html>
