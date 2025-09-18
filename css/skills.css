@@ -1,49 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+*{margin:0;padding:0;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}.skills-section .skills-title{text-align:center;font-size:40px}.skills-section .skills-description{text-align:center;font-size:20px;margin-top:10px}.skills-section .skills-description-creative{text-align:center;font-size:20px;margin-top:10px;margin-bottom:60px}.skills-section .progress-bar{height:10px;font-size:20px;line-height:30px;color:#fff;text-align:center;background-color:#337ab7;box-shadow:rgba(0,0,0,.1) 0px 4px 12px}.skills-section .progress-bar-warning{background-color:#f0ad4e}.skills-section .skills{display:grid;grid-template-columns:repeat(2, 1fr);gap:50px;margin:0 100px 60px 100px}.skills-section .skills .top-data{display:flex;justify-content:space-between}.skills-section .skills .data{margin-bottom:30px}.skills-section .skills .skill-bar{overflow:hidden}@media(min-width: 768px)and (max-width: 840px){.skills-section .skills{margin:0 40px;padding:0}}/*# sourceMappingURL=skills.css.map */-bar {
+  overflow: hidden;
 }
 
-.skills-section .skills-title {
-  text-align: center;
-  font-size: 40px;
-}
-.skills-section .skills-description {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 10px;
-}
-.skills-section .skills-description-creative {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 60px;
-}
-.skills-section .progress-bar {
-  height: 10px;
-  font-size: 20px;
-  line-height: 30px;
-  color: #fff;
-  text-align: center;
-  background-color: #337ab7;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.skills-section .progress-bar-warning {
-  background-color: #f0ad4e;
-}
-.skills-section .skills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  margin: 0 100px 60px 100px;
-}
-.skills-section .skills .top-data {
-  display: flex;
-  justify-content: space-between;
-}
-.skills-section .skills .data {
-  margin-bottom: 30px;
-}
-.skills-section .skills .skill-bar {
-  overflow: hidden;
+@media (min-width: 768px) and (max-width: 840px) {
+  .skills-section .skills {
+    margin: 0 40px;
+    padding: 0;
+  }
 }/*# sourceMappingURL=skills.css.map */

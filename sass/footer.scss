@@ -112,3 +112,12 @@ footer {
         }
     }
 }
+
+@media (min-width:768px) and (max-width:840px) {
+    footer{
+        .footer-top{
+            margin: 40px 20px 30px 20px;
+            padding: 0;
+        }
+    }
+}

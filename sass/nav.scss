@@ -42,3 +42,19 @@ nav {
         }
     }
 }
+
+@media (min-width:768px) and (max-width:840px) {
+    nav{
+        margin: 0;
+        padding: 10px 0;
+        .logo{
+            margin-left: 10px;
+        }
+        ul{
+            margin: 0 20px 0 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+    }
+}

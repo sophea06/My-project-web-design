@@ -54,3 +54,12 @@
         }
     }
 }
+
+@media (min-width:768px) and (max-width:840px) {
+    .skills-section{
+        .skills{
+            margin: 0 40px;
+            padding: 0;
+        }
+    }
+}

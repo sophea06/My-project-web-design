@@ -117,3 +117,13 @@
         }
     }
 }
+
+@media (min-width:768px) and (max-width:840px) {
+    .contact-section{
+        .contact{
+            margin: 0 40px 50px 40px;
+            gap: 70px;
+            padding: 0;
+        }
+    }
+}
