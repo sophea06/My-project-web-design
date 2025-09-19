@@ -16,7 +16,6 @@
     }
 
     .about-content {
-        // width: 100%;
         display: flex;
         align-items: center;
         gap: 30px;
@@ -155,10 +154,6 @@
 
 @media (min-width:300px) and (max-width:600px) {
     .about {
-        // margin: 0;
-        // padding: 0;
-        // width: 100%;
-
         .par-about {
             margin: 0 8px 40px 8px;
         }
