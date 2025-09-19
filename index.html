@@ -21,6 +21,35 @@
 </head>
 
 <body>
+
+    <nav>
+        <div class="logo">
+            <img class="logo-img" src="./img/home-img/my-img.png" alt="logo image">
+            <h2 class="h2-name">Sophea</h2>
+        </div>
+
+        <!-- <div class="menu-icon" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> -->
+
+        <ul id="nav-menu">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#block">My block</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Overlay for mobile menu -->
+        <!-- <div class="overlay" id="overlay"></div> -->
+    </nav>
+
+
     <!-- <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">☰</label>
     <ul>
@@ -54,7 +83,7 @@
             <li><a id="active" href="#contact">Contact</a></li>
         </ul>
     </nav> -->
-
+    <!-- 
     <nav>
         <div class="logo">
             <img class="logo-img" src="./img/home-img/my-img.png" alt="logo image">
@@ -70,7 +99,7 @@
             <li><a id="active" href="#block">My block</a></li>
             <li><a id="active" href="#contact">Contact</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <header class="header">
         <section id="home" class="header-content">
@@ -581,12 +610,7 @@
         </section>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector("nav ul").classList.toggle("show");
-        }
-
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
