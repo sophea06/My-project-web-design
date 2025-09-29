@@ -7,7 +7,8 @@
 
 .about {
     .h2-about {
-        padding-top: 50px;
+        font-family: serif;
+        padding-top: 60px;
         @include title-style;
     }
 
