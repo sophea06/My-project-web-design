@@ -6,6 +6,7 @@
 }
 
 .about {
+    overflow: hidden;
     .h2-about {
         font-family: serif;
         padding-top: 60px;
@@ -183,6 +184,9 @@
                 }
                 .info{
                     margin-left: 20px;
+                    .info-right{
+                        margin-top: -20px;
+                    }
                 }
                 .btn-about{
                     margin-left: 20px;
