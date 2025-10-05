@@ -28,6 +28,10 @@
             font-size: 40px;
             margin: 10px 0;
             font-weight: normal;
+            #role{
+                font-weight: bold;
+                color: $teal-light;
+            }
         }
 
         .par-header {
@@ -43,8 +47,6 @@
                     color: $text-color;
                     text-decoration: none;
                 }
-
-                // margin-right: 10px;
                 background: #3379b741;
                 padding: 10px 30px;
                 font-size: 18px;

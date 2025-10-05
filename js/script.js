@@ -1,4 +1,3 @@
-// Animate circular progress rings
 document.addEventListener('DOMContentLoaded', () => {
     const circles = document.querySelectorAll('.progress-ring-circle');
 
