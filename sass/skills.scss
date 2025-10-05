@@ -23,14 +23,17 @@
     }
 
     .skills {
-        margin: 0 0 0 100px ;
-        width: 85%;
+        margin: 0 0px 0 0px;
+        width: 100%;
         display: grid;
-        gap: 80px;
+        gap: 120px;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
 
         .skills-left {
+            width: 85%;
+            margin-left: 120px;
+
             .top-data {
                 display: flex;
                 justify-content: space-between;
@@ -46,6 +49,9 @@
         }
 
         .skills-right {
+            // margin-right: 80px;
+            width: 80%;
+
             .top-data {
                 display: flex;
                 justify-content: space-between;
@@ -57,6 +63,114 @@
 
             .skill-bar {
                 overflow: hidden;
+            }
+        }
+    }
+
+    .container-2 {
+        max-width: 1200px;
+        margin: 50px 100px 0 100px;
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .skill-card {
+            @include flex-center;
+            flex-direction: column;
+            padding: 40px 20px;
+            background: $white;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                @include card-shadow;
+            }
+        }
+
+        .icon-circle {
+            @include flex-center;
+            width: 180px;
+            height: 180px;
+            background: $gray-bg;
+            border-radius: 50%;
+            margin-bottom: 24px;
+
+            .icon {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .skill-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: $text-dark;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .progress-ring {
+            position: relative;
+            @include flex-center;
+
+            svg {
+                transform: rotate(-90deg);
+            }
+
+            .progress-ring-circle-bg {
+                fill: none;
+                stroke: $gray-light;
+                stroke-width: 8;
+            }
+
+            .progress-ring-circle {
+                fill: none;
+                stroke: $teal-primary;
+                stroke-width: 8;
+                stroke-linecap: round;
+                transition: stroke-dashoffset 1.5s ease-in-out;
+            }
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            font-weight: 700;
+            color: $teal-primary;
+        }
+
+        // Animations
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skill-card {
+            animation: fadeInUp 0.6s ease-out backwards;
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{$i * 0.15}s;
+                }
             }
         }
     }
@@ -89,15 +203,36 @@
     }
 }
 
- @media (min-width:768px) and (max-width:840px) {
-    .skills-section{
-        .skills{
-            .skills-left{
-                margin-left: -70px;
+@media (min-width:768px) and (max-width:840px) {
+    .skills-section {
+        width: 100%;
+        margin: 0 40px;
+        padding: 0;
+
+        #skills-top {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+
+            .skills-left {
+                margin-left: -8px;
+                width: 95%;
             }
-            .skills-right{
-                margin-left: -50px;
+
+            .skills-right {
+                margin-left: -60px;
+                width: 95%;
+            }
+        }
+
+        .container-2 {
+            margin-left: -10px;
+            width: 100%;
+
+            .skills-grid {
+                margin: 0;
+                width: 90%;
+                display: flex;
             }
         }
     }
- }
+}

@@ -76,3 +76,30 @@
     margin-top: 10px;
     margin-bottom: 60px;
 }
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin card-style {
+    background: $bg-white;
+    border-radius: $border-radius;
+    box-shadow: $shadow-sm;
+    transition: $transition;
+
+    &:hover {
+        box-shadow: $shadow-md;
+        transform: translateY(-2px);
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
